@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiziana</title>
+
+    <!-- comentarios -->
+    <!-- estilos linkeados -->
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="start"></div>
+      <nav class="navber">
+        <img src="src/img/imagenLogo.png" alt="Logo" />
+        <div class="center-nav">
+          <a href="">Inicio</a>
+          <a href="">Menu</a>
+          <a href="">Contactanos</a>
+          <a href="">Compra</a>
+        </div>
+        <div class="social">
+          <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href=""><i class="fa-solid fa-house"></i></a>
+        </div>
+
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+
+      <section class="presentacion">
+        <div class="presentacion-flex">
+          <div class="text">
+            <h1>
+              Tiziana <br />
+              Distribuidora
+            </h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Suscipit, recusandae perferendis sunt tempore fugiat ad corrupti
+              quis explicabo iste mollitia similique beatae non possimus,
+              nesciunt ut omnis temporibus. Nemo, iste! Dolorem eos, repudiandae
+              quidem voluptatum quis quos optio laudantium deserunt ipsam
+              dolorum minus earum aperiam aspernatur molestias necessitatibus
+              beatae laborum delectus debitis? Ratione necessitatibus velit
+              voluptatem molestiae suscipit pariatur dolorum.
+            </p>
+            <div class="imagenHeader">
+              <img src="src/img/tiziana.png" alt="Tizina" />
+            </div>
+
+            <div class="botones-header">
+              <a href="" class="btn">Pedir</a>
+              <a href="" class="btn">Ver su compra</a>
+            </div>
+
+          </div>
+        </div>
+        
+      </section>
+    </header>
+
+    <section>
+      <h2>Productos destacados!</h2>
+        <figure class="productos">
+          <img src="src/img/fruta3.png" alt="Fruta 3" />
+          <img src="src/img/fruta2.png" alt="Fruta 2" />
+          <img src="src/img/fruta1.png" alt="Fruta 1" />
+          <img src="src/img/verdura2.png" alt="Verdura 2" />
+        </figure>
+    </section>
+    <main>
+      <section class="contacto">
+        <h2>Queres hacernos un pedido?</h2>
+        <form action="https://formspree.io/f/tu_codigo" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Tiziana Distribuidora. Todos los derechos reservados.</p>
+      <div class="social-footer">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </footer>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/68771b93ef.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

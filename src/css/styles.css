@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  color: white;
+  background: linear-gradient(135deg, rgb(37, 53, 81), #2a5298);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Centrar header y secciones */
+header,
+section,
+footer {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Ajustar la presentación */
+.presentacion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.botones-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* animacion */
+#start {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  animation: starAnimation 1.5s infinite;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+@keyframes starAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: slideInFromTop 1s ease-in-out;
+}
+nav img {
+  width: 50px;
+  animation: slideInFromTop 1s ease-in-out;
+}
+nav .center-nav a,
+social a {
+  color: white;
+  margin-left: 20px;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.navber{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+nav .center-nav a:first-child {
+  color: red;
+}
+nav .center-nav a:hover {
+  color: red;
+  transition: width 0.5s ease-in-out;
+}
+nav .social a {
+  color: white;
+}
+nav .social a:hover,
+social a:hover {
+  color: red;
+  text-shadow: 0px 0px 30px rgb(255, 77, 0);
+}
+
+/* effecto de estilos */
+nav .center-nav a {
+  position: relative;
+  text-decoration: none;
+}
+nav .center-nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: width 0.3s ease-in-out;
+}
+nav .center-nav a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.presentacion-flex{
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 2rem;
+}
+.text {
+  position: static;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+  left: unset;
+  top: unset;
+  flex: 1 1 0;
+  letter-spacing: 1px;
+  animation: fadeInUp 1s ease-in-out;
+}
+.text h1 {
+  fontweight: bold;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: white;
+  animation: fadeInUp 1s ease-in-out;
+}
+.btn {
+  color: white;
+  border: 2px solid;
+  top: 3rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-right: 20px;
+  animation: fadeInUp 1s ease-in-out 0.5s backwards;
+}
+.text .btn:hover {
+  background-color: red;
+  box-shadow: 0px 0px 30px rgb(255, 77, 0);
+  transition: all 0.3s ease;
+}
+.text p {
+  animation: fadeInUp 1s ease-in-out 0.5s backwards;
+}
+.productos {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0 auto 2rem auto;
+  gap: 20px;
+  animation: slideInfromBottom 1s ease-in-out 1.5 backwards;
+}
+
+.productos img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease-in-out 0.5s backwards;
+}
+.productos img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px rgb(255, 77, 0);
+}
+.imagenHeader {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagenHeader img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Centrar formulario de contacto */
+.contacto {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto label,
+.contacto input,
+.contacto textarea,
+.contacto button {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.contacto button {
+  width: auto;
+  align-self: center;
+}
+
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+header,
+section,
+footer {
+  margin-bottom: 2rem;
+}
+
+.contacto {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-bottom: 0;
+}
+
+/* Responsive: Tablets y móviles */
+@media (max-width: 1024px) {
+  .text {
+    left: 2rem;
+    top: 5rem;
+    width: 90%;
+  }
+  .text p {
+    width: 90%;
+  }
+  .productos {
+    width: 98%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header,
+  section,
+  footer {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .productos {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .productos img {
+    width: 90%;
+    height: 80px;
+  }
+  .imagenHeader img {
+    width: 90%;
+    height: auto;
+  }
+  .contacto {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: auto;
+    min-height: 100vh;
+  }
+  .text {
+    position: static;
+    left: 0;
+    top: 0;
+    width: 98%;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+  }
+  .text h1 {
+    font-size: 1.3rem;
+  }
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    top: 1rem;
+  }
+  .productos {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+    z-index: 1;
+  }
+  .productos img {
+    width: 90%;
+    height: 60px;
+    margin: 5px 0;
+  }
+  .imagenHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .imagenHeader img {
+    display: block;
+    position: static;
+    width: 90%;
+    margin: 1rem;
+  }
+}
