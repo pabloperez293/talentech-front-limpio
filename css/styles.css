@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.tarjeta-producto {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.tarjeta-producto:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.tarjeta-producto img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-producto h2 {
+    font-size: 1.2rem;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.tarjeta-producto p {
+    font-size: 1rem;
+    color: #333;
+    margin: 6px 0 12px 0;
+}
+
+.tarjeta-producto button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.tarjeta-producto button:hover {
+    background: #0056b3;
+}
+
+#contador-carrito {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    background: #ff9800;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    z-index: 100;
+}

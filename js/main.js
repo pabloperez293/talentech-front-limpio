@@ -16,11 +16,11 @@ fetch(URL)
             tarjetaProducto.classList.add('tarjeta-producto');
         // por orden dejamos una imagen y un título
             let imagenProducto = document.createElement('img');
-            imagenProducto.src = producto.image[0];
+            imagenProducto.src = producto.images[0];
             imagenProducto.alt = producto.description;
 
             let tituloProducto = document.createElement('h2');
-            tituloProducto.textContent = productos.title;
+            tituloProducto.textContent = producto.title;
 
             let precioProducto = document.createElement('p');
             precioProducto.textContent = `Precio: $${producto.price}`;
@@ -40,10 +40,23 @@ fetch(URL)
             tarjetaProducto.appendChild(btnAgregar);
             
             contenedorProductos.appendChild(tarjetaProducto);
-    }
-
-
-                })
+         }
+      })
     .catch((error) => console.error('Error fetching products:', error));
 };
+
+const agregarProducto = (producto) => {
+    carrito.push(producto);
+    // Actualizar el carrito en localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+};
+
+const actualizarAgregados = () => {
+    const contenedorCarrito = document.getElementById('contador-carrito');
+    contenedorCarrito.textContent = carrito.length;
+
+    };
+// se vuelve a llamar a la función para que se actualice el contador
+    renderizarProductos();
+    actualizarAgregados();
 });
