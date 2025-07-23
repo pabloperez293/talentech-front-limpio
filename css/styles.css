@@ -1,10 +1,104 @@
+:root {
+  --color-texto: #333;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+}
+/* NAVBAR MODERNO Y RESPONSIVO */
+// filepath: c:\Users\pablo\Documents\talentechFront\EntregaFinal\css\styles.css
+
+
+.navber {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  flex-wrap: wrap;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 0 0 16px 16px;
 }
 
+.logoTiziana {
+  width: 80px;
+  border-radius: 20%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.logoTiziana:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 50px rgb(255, 77, 0);
+}
+
+.center-nav {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+  justify-content: center;
+}
+
+.center-nav a {
+  color: var(--color-texto);
+  margin-left: 20px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.center-nav a:first-child {
+  color: red;
+}
+.center-nav a:hover {
+  color: red;
+  background: #ffe5e0;
+}
+
+.social {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.social a {
+  color: rgb(255, 77, 0);
+  font-size: 1.3rem;
+  transition: color 0.2s, text-shadow 0.2s;
+  padding: 6px;
+  border-radius: 50%;
+}
+.social a:hover {
+  color: red;
+  text-shadow: 0px 0px 30px rgb(255, 77, 0);
+  background: #ffe5e0;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  color: #ff4d00;
+  cursor: pointer;
+  margin-left: 18px;
+}
+
+/* Animaciones */
+@keyframes slideInFromTop {
+  0% { transform: translateY(-40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 #contenedor-productos {
     display: flex;
     flex-wrap: wrap;
@@ -66,7 +160,6 @@ body {
 }
 
 #contador-carrito {
-    position: fixed;
     top: 24px;
     right: 32px;
     background: #ff9800;
@@ -77,4 +170,36 @@ body {
     font-size: 1.1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     z-index: 100;
+}
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navber {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 12px 10px;
+  }
+  .center-nav {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin: 12px 0;
+    display: none;
+  }
+  .center-nav.active {
+    display: flex;
+  }
+  .social {
+    margin-top: 10px;
+  }
+  .logoTiziana {
+    margin-bottom: 10px;
+  }
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
 }
